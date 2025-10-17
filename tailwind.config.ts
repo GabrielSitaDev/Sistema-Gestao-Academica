@@ -26,35 +26,19 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))',
-					hover: 'hsl(var(--primary-hover))',
-					light: 'hsl(var(--primary-light))'
+					foreground: 'hsl(var(--primary-foreground))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
-					foreground: 'hsl(var(--secondary-foreground))',
-					hover: 'hsl(var(--secondary-hover))',
-					light: 'hsl(var(--secondary-light))'
-				},
-				success: {
-					DEFAULT: 'hsl(var(--success))',
-					foreground: 'hsl(var(--success-foreground))',
-					light: 'hsl(var(--success-light))'
-				},
-				warning: {
-					DEFAULT: 'hsl(var(--warning))',
-					foreground: 'hsl(var(--warning-foreground))',
-					light: 'hsl(var(--warning-light))'
+					foreground: 'hsl(var(--secondary-foreground))'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
-					foreground: 'hsl(var(--destructive-foreground))',
-					light: 'hsl(var(--destructive-light))'
+					foreground: 'hsl(var(--destructive-foreground))'
 				},
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
-					foreground: 'hsl(var(--muted-foreground))',
-					dark: 'hsl(var(--muted-dark))'
+					foreground: 'hsl(var(--muted-foreground))'
 				},
 				accent: {
 					DEFAULT: 'hsl(var(--accent))',
@@ -78,21 +62,6 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				}
-			},
-			backgroundImage: {
-				'gradient-primary': 'var(--gradient-primary)',
-				'gradient-secondary': 'var(--gradient-secondary)',
-				'gradient-hero': 'var(--gradient-hero)'
-			},
-			boxShadow: {
-				'sm': 'var(--shadow-sm)',
-				'md': 'var(--shadow-md)',
-				'lg': 'var(--shadow-lg)',
-				'xl': 'var(--shadow-xl)'
-			},
-			transitionProperty: {
-				'smooth': 'var(--transition-smooth)',
-				'bounce': 'var(--transition-bounce)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
