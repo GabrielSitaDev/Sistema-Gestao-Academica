@@ -7,6 +7,9 @@ import { AuthProvider } from "@/components/auth/AuthProvider";
 import Index from "./pages/Index";
 import Dashboard from "./pages/Dashboard";
 import NotFound from "./pages/NotFound";
+import { GradesPage } from "./features/grades/GradesPage";
+import { AttendancePage } from "./features/attendance/AttendancePage";
+import { ActivitiesPage } from "./features/activities/ActivitiesPage";
 
 const queryClient = new QueryClient();
 
@@ -20,6 +23,9 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/grades" element={<GradesPage />} />
+            <Route path="/attendance" element={<AttendancePage />} />
+            <Route path="/assignments" element={<ActivitiesPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
