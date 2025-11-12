@@ -10,6 +10,10 @@ import NotFound from "./pages/NotFound";
 import { GradesPage } from "./features/grades/GradesPage";
 import { AttendancePage } from "./features/attendance/AttendancePage";
 import { ActivitiesPage } from "./features/activities/ActivitiesPage";
+import { SchedulePage } from "./features/schedule/SchedulePage";
+import { MaterialsPage } from "./features/materials/MaterialsPage";
+import { StudentProfile } from "./features/students/StudentProfile";
+import { ClassRoomPage } from "./features/teacher/ClassRoomPage";
 
 const queryClient = new QueryClient();
 
@@ -23,9 +27,18 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            
+            {/* Aluno */}
             <Route path="/grades" element={<GradesPage />} />
             <Route path="/attendance" element={<AttendancePage />} />
             <Route path="/assignments" element={<ActivitiesPage />} />
+            <Route path="/schedule" element={<SchedulePage />} />
+            <Route path="/materials" element={<MaterialsPage />} />
+            <Route path="/profile" element={<StudentProfile />} />
+            
+            {/* Professor */}
+            <Route path="/classes/:classId/room" element={<ClassRoomPage />} />
+            
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

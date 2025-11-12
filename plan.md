@@ -6,16 +6,16 @@
 - [x] Design tokens
 - [x] Páginas: Notas, Faltas, Atividades
 
-## Sprint 2 - Professor (Alta Prioridade)
-- [ ] ClassRoomPage - Sala de aula com lista piloto
-- [ ] Tabela de chamada com biometria
+## Sprint 2 - Professor (Alta Prioridade) - Em Andamento
+- [x] ClassRoomPage - Sala de aula com lista piloto
+- [x] Tabela de chamada com biometria
 - [ ] GradeEntry - Lançamento de notas
 - [ ] ActivityCreate/Correction
 
-## Sprint 3 - Aluno (Alta Prioridade)
-- [ ] SchedulePage - Horário completo
-- [ ] MaterialsPage - Biblioteca de materiais
-- [ ] StudentProfile - Perfil com foto 3x4
+## Sprint 3 - Aluno (Alta Prioridade) - Concluído ✓
+- [x] SchedulePage - Horário completo
+- [x] MaterialsPage - Biblioteca de materiais
+- [x] StudentProfile - Perfil com foto 3x4
 - [ ] Messages/Notifications
 
 ## Sprint 4 - Secretaria (Alta Prioridade)

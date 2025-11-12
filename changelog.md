@@ -22,6 +22,17 @@
 - jspdf@latest
 - jspdf-autotable@latest
 
+## [Sprint 2] - 2024-01-18
+
+### Adicionado
+- Página de Sala de Aula (ClassRoomPage) com lista piloto e chamada biométrica
+- Página de Horário de Aulas (SchedulePage) com status das aulas
+- Página de Perfil do Aluno (StudentProfile) com upload de foto 3x4
+- Página de Materiais de Estudo (MaterialsPage) com filtros por disciplina
+- Rotas atualizadas para novas páginas
+- Integração com serviços de biometria e storage
+
 ### Próximo Sprint
-- Implementar área do Professor (ClassRoom, GradeEntry)
-- Completar área do Aluno (Schedule, Materials, Profile)
+- Implementar GradeEntry (lançamento de notas pelo professor)
+- Implementar ActivityCreate/Correction
+- Adicionar áreas de Coordenação, Secretaria, Diretor e Admin

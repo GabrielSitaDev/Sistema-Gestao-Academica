@@ -17,6 +17,10 @@
 - **grades/GradesPage.tsx** - Página de notas e boletim com export PDF
 - **attendance/AttendancePage.tsx** - Página de faltas e presenças
 - **activities/ActivitiesPage.tsx** - Página de trabalhos com upload
+- **schedule/SchedulePage.tsx** - Horário de aulas com status e legenda
+- **materials/MaterialsPage.tsx** - Biblioteca de materiais por disciplina
+- **students/StudentProfile.tsx** - Perfil com foto 3x4 e dados completos
+- **teacher/ClassRoomPage.tsx** - Sala de aula com lista piloto e chamada biométrica
 
 ### Design System
 - **styles/design-tokens.ts** - Tokens semânticos do design system
