@@ -3,7 +3,9 @@ import { useAuth } from '@/hooks/useAuth';
 import { DashboardLayout } from '@/components/layout/DashboardLayout';
 import { StudentDashboard } from '@/components/dashboard/StudentDashboard';
 import { TeacherDashboard } from '@/components/dashboard/TeacherDashboard';
-import { AdminDashboard } from '@/components/dashboard/AdminDashboard';
+import { CoordinatorDashboard } from '@/components/dashboard/CoordinatorDashboard';
+import { SecretaryDashboard } from '@/components/dashboard/SecretaryDashboard';
+import { DirectorDashboard } from '@/components/dashboard/DirectorDashboard';
 import { DeveloperDashboard } from '@/components/dashboard/DeveloperDashboard';
 
 const Dashboard: React.FC = () => {
@@ -19,8 +21,12 @@ const Dashboard: React.FC = () => {
         return <StudentDashboard />;
       case 'teacher':
         return <TeacherDashboard />;
-      case 'admin':
-        return <AdminDashboard />;
+      case 'coordinator':
+        return <CoordinatorDashboard />;
+      case 'secretary':
+        return <SecretaryDashboard />;
+      case 'director':
+        return <DirectorDashboard />;
       case 'developer':
         return <DeveloperDashboard />;
       default:

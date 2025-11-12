@@ -113,7 +113,14 @@ export const useAuthState = () => {
 
 // Helper functions for mock data
 const generateUserId = (role: UserRole): string => {
-  const prefixes = { student: 'STU', teacher: 'TEA', admin: 'ADM', developer: 'DEV' };
+  const prefixes = { 
+    student: 'STU', 
+    teacher: 'TEA', 
+    coordinator: 'COO', 
+    secretary: 'SEC', 
+    director: 'DIR', 
+    developer: 'DEV' 
+  };
   return `${prefixes[role]}${Date.now().toString().slice(-6)}`;
 };
 
@@ -121,7 +128,9 @@ const getMockUserName = (role: UserRole, identifier: string): string => {
   const names = {
     student: ['Ana Silva', 'Carlos Santos', 'Maria Oliveira', 'João Ferreira'],
     teacher: ['Prof. Roberto Lima', 'Prof. Patricia Costa', 'Prof. Daniel Rocha'],
-    admin: ['Coordenador Silva', 'Diretora Santos', 'Secretário Oliveira'],
+    coordinator: ['Coord. Maria Silva', 'Coord. João Santos', 'Coord. Ana Costa'],
+    secretary: ['Sec. Carlos Lima', 'Sec. Paula Oliveira', 'Sec. Roberto Silva'],
+    director: ['Dir. Fernando Santos', 'Dir. Mariana Costa', 'Dir. Paulo Lima'],
     developer: ['Dev Master', 'System Admin', 'Tech Lead']
   };
   return names[role][Math.floor(Math.random() * names[role].length)];

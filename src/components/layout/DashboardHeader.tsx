@@ -25,7 +25,9 @@ export const DashboardHeader: React.FC = () => {
     switch (auth.user?.role) {
       case 'student': return 'Aluno';
       case 'teacher': return 'Professor';
-      case 'admin': return 'Administrador';
+      case 'coordinator': return 'Coordenador';
+      case 'secretary': return 'Secretaria';
+      case 'director': return 'Diretor';
       case 'developer': return 'Desenvolvedor';
       default: return '';
     }

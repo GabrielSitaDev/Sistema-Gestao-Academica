@@ -14,6 +14,8 @@ import { SchedulePage } from "./features/schedule/SchedulePage";
 import { MaterialsPage } from "./features/materials/MaterialsPage";
 import { StudentProfile } from "./features/students/StudentProfile";
 import { ClassRoomPage } from "./features/teacher/ClassRoomPage";
+import UserProfile from "./pages/UserProfile";
+import Settings from "./pages/Settings";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +40,10 @@ const App = () => (
             
             {/* Professor */}
             <Route path="/classes/:classId/room" element={<ClassRoomPage />} />
+            
+            {/* Geral */}
+            <Route path="/user-profile" element={<UserProfile />} />
+            <Route path="/settings" element={<Settings />} />
             
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />

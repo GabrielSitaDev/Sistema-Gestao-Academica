@@ -13,7 +13,7 @@ export interface User {
   biometricId?: string;
 }
 
-export type UserRole = 'student' | 'teacher' | 'admin' | 'developer';
+export type UserRole = 'student' | 'teacher' | 'coordinator' | 'secretary' | 'director' | 'developer';
 
 export interface LoginCredentials {
   identifier: string; // RM para aluno, ID para outros

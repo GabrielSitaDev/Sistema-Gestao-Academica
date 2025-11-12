@@ -8,7 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { UserRole, LoginCredentials } from '@/types/auth';
 import { useAuth } from '@/hooks/useAuth';
-import { Loader2, School, GraduationCap, Users, Settings } from 'lucide-react';
+import { Loader2, School, GraduationCap, Users, Settings, Briefcase, Crown } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 interface LoginFormProps {
@@ -61,11 +61,25 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
       identifierLabel: 'Identificador do Professor',
       identifierPlaceholder: 'Digite seu identificador'
     },
-    admin: {
+    coordinator: {
+      icon: Briefcase,
+      title: 'Acesso da Coordenação',
+      description: 'Painel de coordenação pedagógica',
+      identifierLabel: 'Identificador do Coordenador',
+      identifierPlaceholder: 'Digite seu identificador'
+    },
+    secretary: {
       icon: School,
-      title: 'Acesso da Administração',
-      description: 'Painel administrativo da unidade escolar',
-      identifierLabel: 'Identificador do Administrador',
+      title: 'Acesso da Secretaria',
+      description: 'Painel administrativo da secretaria',
+      identifierLabel: 'Identificador da Secretaria',
+      identifierPlaceholder: 'Digite seu identificador'
+    },
+    director: {
+      icon: Crown,
+      title: 'Acesso da Direção',
+      description: 'Painel executivo da direção',
+      identifierLabel: 'Identificador do Diretor',
       identifierPlaceholder: 'Digite seu identificador'
     },
     developer: {
@@ -100,10 +114,12 @@ export const LoginForm: React.FC<LoginFormProps> = ({ onLoginSuccess }) => {
 
           <CardContent>
             <Tabs value={credentials.userType} onValueChange={(value) => handleInputChange('userType', value as UserRole)}>
-              <TabsList className="grid w-full grid-cols-4 mb-6">
+              <TabsList className="grid w-full grid-cols-6 mb-6">
                 <TabsTrigger value="student" className="text-xs">Aluno</TabsTrigger>
                 <TabsTrigger value="teacher" className="text-xs">Professor</TabsTrigger>
-                <TabsTrigger value="admin" className="text-xs">Admin</TabsTrigger>
+                <TabsTrigger value="coordinator" className="text-xs">Coordenação</TabsTrigger>
+                <TabsTrigger value="secretary" className="text-xs">Secretaria</TabsTrigger>
+                <TabsTrigger value="director" className="text-xs">Direção</TabsTrigger>
                 <TabsTrigger value="developer" className="text-xs">Dev</TabsTrigger>
               </TabsList>
 

@@ -72,15 +72,37 @@ export const DashboardSidebar: React.FC = () => {
           { title: 'Ocorrências', url: '/incidents', icon: Bell },
         ];
       
-      case 'admin':
+      case 'coordinator':
+        return [
+          { title: 'Dashboard', url: '/dashboard', icon: Home },
+          { title: 'Turmas', url: '/classes', icon: Users },
+          { title: 'Professores', url: '/teachers', icon: BookOpen },
+          { title: 'Horários', url: '/schedules', icon: Calendar },
+          { title: 'Relatórios', url: '/reports', icon: BarChart3 },
+          { title: 'Desempenho', url: '/performance', icon: Award },
+          { title: 'Mensagens', url: '/messages', icon: MessageCircle },
+          { title: 'Configurações', url: '/settings', icon: Settings },
+        ];
+
+      case 'secretary':
         return [
           { title: 'Dashboard', url: '/dashboard', icon: Home },
           { title: 'Gestão de Alunos', url: '/students', icon: GraduationCap },
-          { title: 'Gestão de Professores', url: '/teachers', icon: Users },
-          { title: 'Turmas e Horários', url: '/classes', icon: Calendar },
           { title: 'Matrículas', url: '/enrollments', icon: UserPlus },
+          { title: 'Transferências', url: '/transfers', icon: FileText },
+          { title: 'Documentos', url: '/documents', icon: FileText },
           { title: 'Relatórios', url: '/reports', icon: BarChart3 },
-          { title: 'Recursos Escolares', url: '/resources', icon: School },
+          { title: 'Mensagens', url: '/messages', icon: MessageCircle },
+          { title: 'Configurações', url: '/settings', icon: Settings },
+        ];
+
+      case 'director':
+        return [
+          { title: 'Dashboard', url: '/dashboard', icon: Home },
+          { title: 'Visão Geral', url: '/overview', icon: TrendingUp },
+          { title: 'Relatórios Executivos', url: '/reports', icon: BarChart3 },
+          { title: 'Recursos', url: '/resources', icon: School },
+          { title: 'Orçamento', url: '/budget', icon: FileText },
           { title: 'Mensagens', url: '/messages', icon: MessageCircle },
           { title: 'Configurações', url: '/settings', icon: Settings },
         ];
@@ -125,7 +147,9 @@ export const DashboardSidebar: React.FC = () => {
           <SidebarGroupLabel>
             {auth.user.role === 'student' && 'Área do Aluno'}
             {auth.user.role === 'teacher' && 'Área do Professor'}
-            {auth.user.role === 'admin' && 'Área Administrativa'}
+            {auth.user.role === 'coordinator' && 'Área de Coordenação'}
+            {auth.user.role === 'secretary' && 'Área da Secretaria'}
+            {auth.user.role === 'director' && 'Área da Direção'}
             {auth.user.role === 'developer' && 'Área do Desenvolvedor'}
           </SidebarGroupLabel>
           
